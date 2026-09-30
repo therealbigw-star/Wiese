@@ -1,0 +1,254 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Erhebungskarte LV 54612</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: Arbeitskarte für ein Forschungsdesign – Kopf mit Entscheidungsstand, vier Register, Karten mit Kriterienleiste */
+:root{
+  --bg:#f5f6f4; --surface:#ffffff; --ink:#1d2622; --muted:#5b6862; --line:#d7ddd9;
+  --accent:#2f6f62; --accent-soft:#e2eeea;
+  --ok:#2f7d4f; --ok-bg:#e3f1e8; --prop:#9a6a12; --prop-bg:#f7eed9; --open:#3c5a8c; --open-bg:#e5ecf7; --no:#8a3b3b; --no-bg:#f4e3e3;
+  --f-display:"Source Serif 4", Georgia, serif; --f-body:"Atkinson Hyperlegible", system-ui, sans-serif; --f-mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141a18; --surface:#1c2421; --ink:#e6ece9; --muted:#9fb0a9; --line:#2f3a36;
+  --accent:#6cc0ad; --accent-soft:#1f3530;
+  --ok:#79c795; --ok-bg:#1d3326; --prop:#e0b25a; --prop-bg:#352a15; --open:#8fb0e6; --open-bg:#1c2940; --no:#e39a9a; --no-bg:#3a2020; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141a18; --surface:#1c2421; --ink:#e6ece9; --muted:#9fb0a9; --line:#2f3a36;
+  --accent:#6cc0ad; --accent-soft:#1f3530;
+  --ok:#79c795; --ok-bg:#1d3326; --prop:#e0b25a; --prop-bg:#352a15; --open:#8fb0e6; --open-bg:#1c2940; --no:#e39a9a; --no-bg:#3a2020; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:28px 60px}
+header h1{font-family:var(--f-display);font-weight:700;font-size:clamp(1.6rem,3.5vw,2.2rem);margin:0 0 4px;text-wrap:balance}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+header p{margin:6px 0 0;color:var(--muted);max-width:70ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;padding:2px 9px;border-radius:999px;font-weight:700;white-space:nowrap}
+.s-ok{background:var(--ok-bg);color:var(--ok)} .s-prop{background:var(--prop-bg);color:var(--prop)} .s-open{background:var(--open-bg);color:var(--open)} .s-no{background:var(--no-bg);color:var(--no)}
+nav.tabs{display:flex;flex-wrap:wrap;gap:4px;margin:24px 0 16px;border-bottom:1px solid var(--line)}
+nav.tabs button{font:inherit;font-weight:700;background:none;border:0;border-bottom:3px solid transparent;padding:8px 12px;color:var(--muted);cursor:pointer}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--accent)}
+nav.tabs button:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.toolbar label{font-size:.85rem;color:var(--muted)}
+.chip{font:inherit;font-size:.82rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:4px 10px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card.fav{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+.card h3{font-family:var(--f-display);font-size:1.08rem;margin:0;line-height:1.3}
+.card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.id{font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
+.crit{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;font-size:.72rem;color:var(--muted);text-align:center}
+.crit div{border:1px solid var(--line);border-radius:5px;padding:4px 2px}
+.crit b{display:block;font-size:1rem;color:var(--ink);font-weight:400}
+.card p{margin:0}
+details summary{cursor:pointer;color:var(--accent);font-weight:700;font-size:.88rem}
+details ul{margin:6px 0 0;padding-left:18px}
+details li{margin:3px 0}
+.src{font-size:.8rem;color:var(--muted)}
+h2{font-family:var(--f-display);font-size:1.3rem;margin:26px 0 10px}
+.note{background:var(--accent-soft);border-radius:8px;padding:12px 14px;font-size:.92rem;max-width:80ch}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:.9rem}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.timeline{display:grid;gap:0;border-left:2px solid var(--line);margin-left:6px}
+.tl{position:relative;padding:4px 0 14px 18px}
+.tl::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.tl .d{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tl b{display:block}
+.steps{counter-reset:s;display:grid;gap:10px;padding:0;list-style:none}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px 12px 52px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--bg);font-weight:700;display:grid;place-items:center;font-size:.85rem}
+.empty{color:var(--muted);font-style:italic}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+</style>
+
+<style>
+.grp{font-family:var(--f-mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tag{font-size:.72rem;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted)}
+.count{font-size:.85rem;color:var(--muted);margin-left:auto}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">LV 54612 · Gr. 9/10 · WiSe 26/27 · Stand 30.09.2026</div>
+  <h1>Artefakte und Erhebungsdesigns</h1>
+  <p>Alle bisher erwogenen Aufgaben, Erhebungsbausteine und Designs für die Erhebung im Seminar „GKI und Ableismus“, einschließlich der neuen Literatur (M209–M221, Autenrieth et al. 2026). Bewertungen sind Claudes Einschätzung, nicht empirisch geprüft. Quellenkürzel verweisen auf die Karteikarten im Projekt.</p>
+  <div class="legend">
+    <span class="pill s-ok">✓ entschieden</span><span class="pill s-prop">Vorschlag</span><span class="pill s-open">offen</span><span class="pill s-no">verworfen / nicht empfohlen</span>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button role="tab" id="t-artefakte" aria-controls="p-artefakte">Aufgaben</button>
+  <button role="tab" id="t-bausteine" aria-controls="p-bausteine">Erhebungsbausteine</button>
+  <button role="tab" id="t-designs" aria-controls="p-designs">Designs</button>
+  <button role="tab" id="t-ablauf" aria-controls="p-ablauf">Ablauf &amp; Entscheidungen</button>
+</nav>
+
+<section id="p-artefakte" role="tabpanel" aria-labelledby="t-artefakte">
+  <div class="note">Kriterien: <b>Anlass t1 / t2</b> = echter Grund für GKI zu beiden Zeitpunkten · <b>Blind</b> = gleiche Inhalte zu t1 und t2, Review ohne Zeitpunkt möglich · <b>Prüfbar</b> = ableismusbezogene Muster kodierbar. ● erfüllt · ◐ eingeschränkt · ○ nicht erfüllt. <b>Nutzen</b>: Studierende verwenden KI für eine eigene Studienaufgabe (Umgang im Alltag). <b>Gestalten</b> und <b>Prüfen</b> verschieben den Gegenstand der Studie.</div>
+  <div class="toolbar" style="margin-top:14px">
+    <label>Filtern:</label>
+    <button class="chip" data-f="all" aria-pressed="true">Alle</button>
+    <button class="chip" data-f="short" aria-pressed="false">Engere Wahl</button>
+    <button class="chip" data-f="Nutzen" aria-pressed="false">Nutzen</button>
+    <button class="chip" data-f="Gestalten" aria-pressed="false">Gestalten</button>
+    <button class="chip" data-f="Prüfen" aria-pressed="false">Prüfen</button>
+    <button class="chip" data-f="no" aria-pressed="false">Verworfen</button>
+    <span class="count" id="artCount"></span>
+  </div>
+  <div class="grid" id="artGrid"></div>
+</section>
+
+<section id="p-bausteine" role="tabpanel" aria-labelledby="t-bausteine" hidden>
+  <div class="note">Bausteine lassen sich mit jeder Aufgabe kombinieren. Grundsatz: Erfassung muss vor t1 feststehen, Auswertung darf später folgen.</div>
+  <div class="grid" id="bauGrid" style="margin-top:14px"></div>
+</section>
+
+<section id="p-designs" role="tabpanel" aria-labelledby="t-designs" hidden>
+  <div class="note">Festgelegt am 29.09.: t1 und t2 sind zwei <b>deskriptive Momentaufnahmen</b>, keine Wirkungsevaluation. D4 und D7 würden das ändern; D6 und D8 verschieben den Gegenstand vom Umgang im Alltag zum gezielten Prüfen bzw. Gestalten.</div>
+  <h2>Vergleich</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Design</th><th>Status</th><th>Was es trägt</th><th>Was es nicht trägt</th><th>Kosten und Folgen</th><th>Vorbild</th></tr></thead>
+    <tbody id="desRows"></tbody>
+  </table></div>
+</section>
+
+<section id="p-ablauf" role="tabpanel" aria-labelledby="t-ablauf" hidden>
+  <h2>Reihenfolge der Entscheidungen</h2>
+  <ol class="steps">
+    <li><b>Fragestellung:</b> Umgang im Alltag (Nutzen), gezieltes Prüfen oder Gestalten? Nur Erkennen oder auch Übernehmen, Verändern, Zurückweisen? <span class="pill s-open">offen</span><br><span class="src">Entscheidet über Aufgabe und Design, zuerst klären.</span></li>
+    <li><b>Aufgabe</b> (engere Wahl: Lernkarte VL 2, KI-Feedback auf eigene Definition, Fall durch ein Modell; zusätzlich Seminargestaltung als Fallstudie) <span class="pill s-open">offen</span><br><span class="src">Anfang Oktober, vor der Pilotierung.</span></li>
+    <li><b>Erfassung:</b> Chat, Rohausgabe, Endfassung, kurzer Recall, ohne Namen und Datum <span class="pill s-prop">Vorschlag</span><br><span class="src">Muss vor t1 feststehen. Chats wertet nur Hendrik aus ✓.</span></li>
+    <li><b>Gegenstand des Reviews:</b> nur Endfassung oder Rohausgabe + Endfassung <span class="pill s-open">offen</span><br><span class="src">Entscheidung vom 29.09. („Systemausgabe und Übernahmeentscheidung“) spricht für Rohausgabe + Endfassung.</span></li>
+    <li><b>Raster:</b> Indikatoren + Shelby/Wang als Analyseebene, in S10 als Checkliste gemeinsam erarbeitet; gleiches Raster für Hendrik und Studierende ✓ <span class="pill s-prop">Vorschlag</span><br><span class="src">Bis S10 (17.12.).</span></li>
+    <li><b>Teil C, eigener Audit, Ethik- und Datenschutzkonzept</b> <span class="pill s-prop">Vorschlag</span><br><span class="src">Material für C bis t1. Einwilligung, Ethikvotum vs. internes Konzept, Pilotierung, Zweitkodierung weiter offen.</span></li>
+  </ol>
+  <h2>Zeitachse</h2>
+  <div class="timeline">
+    <div class="tl"><span class="d">bis ca. 15.10.</span><b>Aufgabe, Erfassung und Modell festlegen, Vorlage selbst im Tool durchspielen</b>Zugleich Einstieg in den eigenen Audit. Tool für t1 und t2 identisch halten.</div>
+    <div class="tl"><span class="d">22.10. / 29.10.</span><b>Werkstatt t1</b>Aufgabe zu Begriff X bzw. Y, Recall, Teil C. Nach VL 2 nur mit Tausch S2/S3 oder asynchron in S3 (VL-Termine 26/27 ungeprüft).</div>
+    <div class="tl"><span class="d">05.11.–17.12.</span><b>Theorieblock S4–S10 (Seminargestaltungen)</b>Optional: Fallstudie Seminargestaltung auf Teamebene. S10: Raster als Checkliste.</div>
+    <div class="tl"><span class="d">14.01.</span><b>Werkstatt t2</b>jeweils anderer Begriff, Recall, dieselben Items in Teil C.</div>
+    <div class="tl"><span class="d">15.–20.01.</span><b>Sichtung, eigene Kodierung vor den Reviews, mischen, zuteilen</b>Engpass im Zeitplan.</div>
+    <div class="tl"><span class="d">21.01.</span><b>Peer-Review</b>doppelblind, kreuzweise Gr. 9 ↔ Gr. 10.</div>
+    <div class="tl"><span class="d">28.01.</span><b>Rückmeldung und Abschluss</b>Auswertung auf Gruppenebene nach Indikator.</div>
+    <div class="tl"><span class="d">nach Notenvergabe</span><b>Einwilligung zur Forschungsnutzung</b>durch eine nicht lehrende Person einholen; Lehrnutzung im Semester von Forschungsnutzung trennen.</div>
+  </div>
+</section>
+</div>
+
+<script>
+const A=[
+ {g:"Nutzen",id:"8·VL2",name:"Lernkarte zu VL 2 (soziales / menschenrechtliches Modell)",st:"prop",fav:1,short:1,c:["●","●","●","●"],
+  txt:"Nachbereitung von VL 2 (t1), Klausurwiederholung (t2). Felder: Definition, Wo liegt Behinderung?, erfundenes Beispiel, Abgrenzung zum medizinischen Modell.",
+  pro:["Anlass zu beiden Zeitpunkten, gleiche Inhalte → Blindung hält","Begriffe selbst nicht defizitorientiert","Wang-Muster „Legitimierung des medizinischen Modells“ direkt kodierbar","Anschluss an S4"],
+  con:["t1 braucht VL 2 vorher","Beispielfeld kann Selbstauskünfte auslösen","Begriffe nicht gleichwertig","Abstimmung mit T. Hoffmann; keine VL-Folien in KI-Eingaben"],src:"M188–M205, M021"},
+ {g:"Nutzen",id:"A",name:"KI-Feedback auf die eigene Definition",st:"prop",fav:1,short:1,c:["●","●","●","●"],
+  txt:"Studierende schreiben 3–4 Sätze selbst, dann verbessert die KI.",
+  pro:["Eigene Position liegt vor dem KI-Eingriff vor → Übernehmen und Aufgeben sichtbar","Realistische Schreibhilfe","Verwandt mit „KI als Kritikerin“"],
+  con:["Für Unsichere evtl. unangenehm"],src:"M085"},
+ {g:"Nutzen",id:"B",name:"Ein Fall, durch ein Modell gelesen",st:"prop",short:1,c:["●","●","●","●"],
+  txt:"Vorgegebene erfundene Alltagssituation; die KI erklärt, wie Modell X sie beschreibt.",
+  pro:["Am stärksten standardisiert","Zugleich Audit-Material","Kombinierbar mit A"],con:["Vignette darf keine Defizitrahmung vorgeben"],src:"–"},
+ {g:"Nutzen",id:"S",name:"Seminargestaltung mit KI vorbereiten (Team)",st:"open",short:1,c:["●","○","○","●"],
+  txt:"Die Teams planen ihre Sitzung S4–S10 (Behinderungsbegriff, Ableismus, Sprache …) mit KI: Material, Einstieg, Beispiele, Diskussionsfragen.",
+  pro:["Echteste Aufgabe: verpflichtende Arbeitsleistung aller","Nächstes Gegenstück zu Autenrieths Unterrichtsplanung","Behinderung kommt über den Inhalt","Daten auf Teamebene"],
+  con:["Passt nicht in t1/t2: ein Zeitpunkt je Team, Themen verschieden, späte Teams wissen mehr","Studienleistung und Erhebung vermischen sich → Freiwilligkeit getrennt sichern","KI-Material mit ableistischen Mustern steht ggf. vor der Gruppe","14 Fälle Mehraufwand"],src:"X001 (Autenrieth et al. 2026)"},
+ {g:"Nutzen",id:"9",name:"SC-Übungsfragen zur VL-Klausur",st:"prop",c:["◐","●","●","●"],txt:"KI erzeugt Single-Choice-Fragen zu VL-Begriffen.",
+  pro:["Passt zum Klausurformat","Distraktoren zeigen, was das Modell für plausibel hält"],con:["Anlass zu t1 schwach"],src:"M204/M205"},
+ {g:"Nutzen",id:"10",name:"Verständnishilfe / Übersetzung einer englischen Passage",st:"prop",c:["●","●","●","●"],txt:"GKI hilft bei englischer Lektüre.",
+  pro:["Übersetzungsentscheidungen (disabled people, impairment/disability) kodierbar"],con:["Englischkenntnisse beeinflussen die Übernahme","Zwei gleichwertige Passagen nötig"],src:"M186"},
+ {g:"Nutzen",id:"M",name:"KI-Tool fürs Studium wählen (Modellvergleich)",st:"open",c:["●","◐","◐","◐"],
+  txt:"Gleiche Studienfrage an mehrere Modelle, begründete Wahl eines Werkzeugs.",
+  pro:["Echter Anlass zu Studienbeginn","Modellunterschiede sichtbar"],con:["Erlaubte Tools/Datenschutz offen","Anlass zu t2 schwächer","Behinderungsbezug nur über die Testfrage"],src:"M002, M164"},
+ {g:"Nutzen",id:"C",name:"Vergleichstabelle der Modelle",st:"prop",c:["◐","●","●","◐"],txt:"Feste Spalten: Wo liegt Behinderung? Ziel? Wer handelt? Rolle der Menschen mit Behinderung?",
+  pro:["Handlungsmacht / Passivierung sichtbar"],con:["Ähnlich wie Lernkarte"],src:"–"},
+ {g:"Nutzen",id:"D",name:"Literaturrecherche mit KI",st:"open",c:["●","○","◐","●"],txt:"„Nenne Grundlagentexte zum sozialen Modell“.",
+  pro:["Wer spricht? Autor:innen mit Behinderungserfahrung?","CAIL: erfundene Quellen"],con:["Kein Anlass zu t2","Prüfaufwand hoch"],src:"–"},
+ {g:"Nutzen",id:"1",name:"Zusammenfassung einer Seminarlektüre",st:"open",c:["●","●","◐","◐"],txt:"",pro:["Anlass real"],con:["Zwei gleichwertige Texte nötig","Prüft eher Quellentreue"],src:"Seminarablauf"},
+ {g:"Nutzen",id:"3",name:"Recherchefrage zu Teilhabe",st:"open",c:["●","●","◐","◐"],txt:"",pro:["Für Reha stark"],con:["Nur Darstellung prüfbar"],src:"Seminarablauf"},
+ {g:"Nutzen",id:"E",name:"KI als Tutor, der abfragt",st:"open",c:["●","●","○","◐"],txt:"",pro:["Verbreitete Lernpraxis"],con:["Kaum standardisierbar"],src:"–"},
+ {g:"Nutzen",id:"11",name:"Rückfrage zu einer Unklarheit aus der VL",st:"open",c:["●","●","○","◐"],txt:"",pro:["Sehr authentisch"],con:["Inhalt verrät Zeitpunkt","Selbstauskunftsrisiko"],src:"–"},
+ {g:"Nutzen",id:"F",name:"Argumente für die Diskussion in S4",st:"open",c:["●","○","◐","◐"],txt:"",pro:["Berechtigte vs. medizinisch motivierte Kritik am sozialen Modell"],con:["Für Erstsemester schwer zu trennen","Anlass nur zu t1"],src:"–"},
+ {g:"Nutzen",id:"G",name:"Bild zur Lernkarte (Bildgenerierung)",st:"open",c:["◐","◐","◐","●"],txt:"",pro:["Repräsentation sofort sichtbar: Typenbilder, Rollstuhl, Traurigkeit"],con:["Tool und Datenschutz offen","Eher Zusatz"],src:"M214, M219"},
+ {g:"Gestalten",id:"CB",name:"Ableismussensiblen Chatbot gestalten",st:"open",c:["●","●","◐","●"],
+  txt:"Studierende schreiben Anweisungen (Systemprompt) für einen Chatbot, der Behinderung erklärt, testen und überarbeiten ihn.",
+  pro:["Gestaltungsaufgabe „Chatbot gestalten“ bei Seyferth-Zapf et al. evaluiert (Selbsteinschätzung)","Aktion-Mensch-Regeln sind Regeln für Chatbots","Zeigt, was sich durch Anweisungen nicht beheben lässt"],
+  con:["Gegenstand verschiebt sich zu Gestalten","Zu t1 fehlt Theorie","Aktion-Mensch-Regeln normativ gesetzt"],src:"M112a, M006, M007"},
+ {g:"Prüfen",id:"AU",name:"Gruppenaudit: Studierende als Auditor:innen",st:"open",c:["●","●","●","●"],
+  txt:"Kleingruppen prüfen ein Modell mit kontrollierter Variation (gleiche Frage, nur Merkmal oder Bezeichnung variiert) und protokollieren.",
+  pro:["Theoretisch fundiert (everyday / user-driven auditing)","Daten auf Gruppenebene, weniger personenbezogen","Einziger Ansatz, der auch Quality-of-Service-Schäden zeigt","Weissburg et al.: Behinderung besonders bias-anfällig in Lernerklärungen"],
+  con:["Gegenstand verschiebt sich zu gezieltem Prüfen","Eigene Erfahrung lenkt das Finden → Betroffene nicht zu Detektor:innen machen","Nah an Hendriks Audit (Doppelung)"],src:"M211, M218, M013, M012, M220"},
+ {g:"Prüfen",id:"H",name:"KI als Kritikerin eines Materials",st:"prop",c:["◐","◐","●","●"],txt:"KI kritisiert ein Material, Studierende prüfen die Kritik ableismuskritisch.",
+  pro:["Logik in der Forschung erprobt (Machbarkeit)"],con:["Evaluiert ist die KI-Kritik, nicht die Aufgabe"],src:"M085"},
+ {g:"Prüfen",id:"P",name:"KI als belehrbarer Peer",st:"open",c:["●","●","●","●"],
+  txt:"Ein vorbereiteter Agent spielt eine Kommilitonin mit typischen Fehlvorstellungen; Studierende erklären ihr das soziale Modell.",
+  pro:["Standardisierter Reiz im Dialog, sehr vergleichbar"],con:["Misst Umgang mit vorgegebenen Mustern, nicht mit echtem Systembias (wie Teil C)","Design offenlegen"],src:"M158"},
+ {g:"Prüfen",id:"SIM",name:"Eine Simulation prüfen",st:"open",c:["●","◐","◐","●"],
+  txt:"Interaktion mit einer KI-simulierten Schülerperson, wie sie in der Lehrkräftebildung angeboten wird.",
+  pro:["Solche Werkzeuge gibt es tatsächlich","Drift zur „Unauffälligkeit“ als Normalisierung lesbar"],con:["Personas nach medizinischem Modell","Für Erstsemester eher fern, sensibel"],src:"M056, M208"},
+ {g:"Nutzen",id:"2",name:"GKI-Bild für eigene Präsentation",st:"open",c:["◐","○","◐","●"],txt:"",pro:["Repräsentation"],con:["Anlass nur für präsentierende Teams"],src:"Seminarablauf"},
+ {g:"Nutzen",id:"4",name:"Fallbeispiel für die Seminargestaltung",st:"no",c:["●","○","○","●"],txt:"",pro:[],con:["Anlass nur zu t1 (in S enthalten)"],src:"Seminarablauf"},
+ {g:"Nutzen",id:"6",name:"Berufstexte",st:"no",c:["○","○","●","●"],txt:"",pro:[],con:["Berufssimulation"],src:"Seminarablauf"},
+ {g:"Nutzen",id:"7",name:"Einfache Sprache",st:"no",c:["○","○","●","◐"],txt:"",pro:[],con:["„Sprechen für“ ohne Zielgruppe"],src:"Seminarablauf"},
+ {g:"Nutzen",id:"5",name:"Post / Ankündigung",st:"no",c:["○","○","●","●"],txt:"",pro:[],con:["Verworfene Variante (Text über Behinderung ohne Anlass)"],src:"Projektsetzung"},
+ {g:"Nutzen",id:"12",name:"„Was studierst du eigentlich?“",st:"no",c:["○","○","●","●"],txt:"",pro:[],con:["Kein Anlass für GKI"],src:"–"},
+ {g:"Prüfen",id:"TX",name:"Texte über KI analysieren (Anleitungen, Produktseiten)",st:"no",c:["○","○","●","●"],txt:"",pro:["Ergiebig, keine Personendaten"],con:["Keine KI-Nutzung → Umgang mit Ausgaben entfällt"],src:"M025, M081, M102"}
+];
+const B=[
+ {name:"Artefakt mit Spur",st:"prop",txt:"Zweck · Chatverlauf · Rohausgabe · Endfassung, einheitliches Format ohne Namen und Datum.",pts:["Endprodukt verdeckt den Prozess: ähnliche Übernahmeanteile, verschiedene Urteilswege (X001, 12 Sitzungen)","Chats wertet nur Hendrik aus ✓"],src:"X001"},
+ {name:"Maß der wörtlichen Übernahme",st:"prop",txt:"Anteil der Wörter der Endfassung in wörtlichen Folgen von ≥ 8 Wörtern aus der Rohausgabe.",pts:["Automatisch, objektiv, keine Zusatzdaten","Paraphrasen nicht erfasst","Nur auf Gruppenebene berichten"],src:"X001 (nach Citron & Ginsparg 2015)"},
+ {name:"Kurzer Recall",st:"prop",txt:"Am Ende der Werkstatt: eine geänderte oder gestrichene Stelle markieren, 1–2 Sätze warum. Neutral formuliert, zu t1 und t2.",pts:["Ohne Recall ist Zurückweisen kaum deutbar (Kürzung oder Ableismuskritik?)","Lenkt die Aufmerksamkeit → Limitation benennen","Menschlich/schriftlich statt LLM-Interviewer"],src:"X001, M210"},
+ {name:"Chat-Kodierung",st:"open",txt:"Auswertung nur durch Hendrik, Verfahren offen.",pts:["Drei Orte des Urteils: vor, während, durch Zurückweisung","Adoption-Kategorien (wholesale, selective copy, rewrite, restart)","Bewertung vor Übernahme ja/nein (Chen et al.)","passiv vs. kollaborativ (Nasr et al.)","Zurückspielen an das Modell (Autenrieth 2026)"],src:"X001, M210, M215, M007"},
+ {name:"Teil C: vorgegebene Ausgaben einschätzen",st:"prop",txt:"Identisch zu t1 und t2. Bestes Instrument, um Veränderung auf Gruppenebene zu beschreiben.",pts:["Floskelübung „hilfreich / belastend / neutral“ mit KI-Sätzen (Gottert & Lorenz)","Prompt-Ausgabe-Paare beurteilen (Barrett & Pack)","KI-Begründungen beurteilen, die den Grund verschleiern (Kotek et al.; Glazko et al.)","Itempaar Haltungsaussage vs. Aufgabenausgabe (Autenrieth 2026)"],src:"M042, M209, M213, M012, M093"},
+ {name:"Peer-Review",st:"ok",txt:"Doppelblind, kreuzweise, t1/t2 gemischt, gleiches Raster wie Hendriks Kodierung.",pts:["Gegenstand offen: Endfassung oder Roh + End","Nur nach Indikator auswerten, kein Trefferscore pro Person","Hendrik kodiert vor den Reviews"],src:"Entscheidungen 29.09."},
+ {name:"Raster in zwei Ebenen",st:"prop",txt:"Analyseebene (Hendrik): Shelby/Wang. Kodierebene (auch Review): wenige Indikatoren, in S10 als Checkliste erarbeitet.",pts:["A–H, stärken- vs. defizitorientiert, medizinisches Modell legitimiert","Inspiration Porn, nichtbehinderte Retter:innen, subtile Stereotype (Gadiraju et al.)","Typenbild, Hilfsmittel statt Person, Traurigkeit/Isolation (Mack et al.)","Tonalität / Wärme-Signale (Zhou et al.)","Beurteilungsaufgabe mit Checkliste (Seyferth-Zapf et al.)"],src:"M006, M104, M019, M021, M212, M214, M221, M112a"},
+ {name:"Eigener Audit durch Hendrik",st:"prop",txt:"Gleiche Aufgaben standardisiert, ohne Personendaten.",pts:["Mit/ohne Rahmung im Prompt (Hypothese Autenrieth, Fördermagazin)","Haltungsabfrage vs. generierte Ausgabe","Variation des Merkmals nach Weissburg et al.","Liefert Material für Teil C; menschlich kodieren (Tian et al.: automatische Maße übersehen Rahmung)"],src:"M007, M093, M220, M219"},
+ {name:"Ethik und Datenschutz",st:"open",txt:"Setzungen: keine Weitergabe an Dritte, keine personenbezogenen Daten in KI-Eingaben, kein Score auf Personenebene.",pts:["Lehrnutzung (Review im Semester) von Forschungsnutzung (nach Notenvergabe) trennen","Einwilligung durch nicht lehrende Person (SoTL-Leitfäden, ungeprüft)","Zweckbindung: Chats nie zur Leistungsbewertung (X001)","Ethikvotum vs. internes Konzept offen; Ableismus-Erhebung sensibler als Planungsartefakte"],src:"X001, M164, Gemini-Bericht (ungeprüfte Leitfäden)"},
+ {name:"Reflexionsprompt vor Übernahme",st:"no",txt:"Kurzer metakognitiver Impuls senkt Übernahme falscher Ratschläge (62,4 % → 39,7 %).",pts:["Intervention → misst Wirkung des Impulses, nicht den Umgang von sich aus","Dort gibt es eine richtige Antwort; für Ableismus fehlt diese Norm","Nur in einem Wirkungsdesign sinnvoll"],src:"M216"},
+ {name:"Trace + automatisches LLM-Interview",st:"no",txt:"Plattform nach Autenrieth et al. 2026.",pts:["Sehr feinkörnig (Clipboard, Fokus, Undo)","Kein Eskalationspfad bei sensiblen Themen, Datenverarbeitung nicht beschrieben","Eher für SoSe 2027"],src:"X001"}
+];
+const D=[
+ {n:"D1 · Deskriptiv, eine Aufgabe + Recall + Teil C",st:"prop",t:"Umgang zu zwei Zeitpunkten; Veränderung auf Gruppenebene (v. a. Teil C und Übernahmemaß)",nt:"Wirkung des Seminars",k:"Machbar; C und Erfassung bis t1",v:"X001 (Elemente), M209"},
+ {n:"D2 · Deskriptiv, zwei Aufgabentypen",st:"open",t:"Hängt der Umgang von der Aufgabenart ab?",nt:"Wirkung",k:"Werkstatt knapp, doppelte Sichtung, 4 Reviews pro Person",v:"–"},
+ {n:"D3 · D1 + pseudonymisierte Paare, qualitativ",st:"open",t:"Typische Verläufe einzelner Fälle ohne Score",nt:"Häufigkeiten, Wirkung",k:"Verknüpfung über Code; Einwilligung früh",v:"–"},
+ {n:"D5 · D1 + Fallstudie Seminargestaltung (Teamebene)",st:"open",t:"Umgang in der echtesten Aufgabe; drei Orte des Urteils; Teamdaten",nt:"Vergleich t1/t2 für diesen Strang",k:"14 Fälle, Freiwilligkeit getrennt von der Leistung, Umgang mit problematischem Material vor der Gruppe klären",v:"X001"},
+ {n:"D6 · Gruppenaudit statt individueller Artefakte",st:"open",t:"Was Erstsemester gezielt finden; Gruppendaten",nt:"Umgang im Alltag",k:"Gegenstand verschiebt sich; Betroffene nicht zu Detektor:innen machen",v:"M211, M218, M220"},
+ {n:"D8 · Gestaltungsstudie Chatbot",st:"open",t:"Welche Muster lassen sich durch Anweisungen beheben, welche nicht",nt:"Umgang im Alltag",k:"Andere Studie; Theorie vorher nötig",v:"M112a"},
+ {n:"D4 · Wirkungsdesign mit Vergleichsgruppe",st:"no",t:"Annäherung an „was bewirkt das Seminar?“",nt:"—",k:"Vergleichsgruppen, Einwilligung vorab, stärkeres Ethikvotum, Überschneidung mit T4 SoSe 2027",v:"M112a, M140"},
+ {n:"D7 · Interventionsvariante Reflexionsprompt",st:"no",t:"Wirkung eines Impulses auf Übernahme",nt:"Umgang von sich aus",k:"Widerspricht deskriptiver Rahmung; Norm für „falsch“ fehlt",v:"M216"}
+];
+const lab={ok:"✓ entschieden",prop:"Vorschlag",open:"offen",no:"verworfen"};
+const pc={ok:"s-ok",prop:"s-prop",open:"s-open",no:"s-no"};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function list(a){return a.length?"<ul>"+a.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ul>":""}
+function renderA(f){
+  const g=document.getElementById("artGrid");
+  const items=A.filter(a=>f==="all"?true:f==="short"?a.short:f==="no"?a.st==="no":(a.g===f&&a.st!=="no"));
+  document.getElementById("artCount").textContent=items.length+" von "+A.length;
+  g.innerHTML=items.length?items.map(a=>`<article class="card${a.fav?" fav":""}">
+   <div class="top"><div><div class="meta"><span class="id">${esc(a.id)}</span><span class="tag">${esc(a.g)}</span></div><h3>${esc(a.name)}</h3></div><span class="pill ${pc[a.st]}">${a.fav?"Favorit":lab[a.st]}</span></div>
+   <div class="crit"><div><b>${a.c[0]}</b>Anlass t1</div><div><b>${a.c[1]}</b>Anlass t2</div><div><b>${a.c[2]}</b>Blind</div><div><b>${a.c[3]}</b>Prüfbar</div></div>
+   ${a.txt?`<p>${esc(a.txt)}</p>`:""}
+   <details><summary>Für und gegen</summary>${a.pro.length?"<b>Für</b>"+list(a.pro):""}${a.con.length?"<b>Gegen</b>"+list(a.con):""}<p class="src">Quellen: ${esc(a.src)}</p></details>
+  </article>`).join(""):'<p class="empty">Keine Einträge.</p>';
+}
+document.getElementById("bauGrid").innerHTML=B.map(b=>`<article class="card"><div class="top"><h3>${esc(b.name)}</h3><span class="pill ${pc[b.st]}">${b.st==="no"?"nicht empfohlen":lab[b.st]}</span></div><p>${esc(b.txt)}</p>${list(b.pts)}<p class="src">Quellen: ${esc(b.src)}</p></article>`).join("");
+document.getElementById("desRows").innerHTML=D.map(d=>`<tr><td><b>${esc(d.n)}</b></td><td><span class="pill ${pc[d.st]}">${d.st==="no"?"nicht empfohlen":lab[d.st]}</span></td><td>${esc(d.t)}</td><td>${esc(d.nt)}</td><td>${esc(d.k)}</td><td class="src">${esc(d.v)}</td></tr>`).join("");
+document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===c?"true":"false"));renderA(c.dataset.f)}));
+renderA("all");
+const tabs=["artefakte","bausteine","designs","ablauf"];
+function show(t){tabs.forEach(x=>{document.getElementById("p-"+x).hidden=x!==t;document.getElementById("t-"+x).setAttribute("aria-selected",x===t?"true":"false")});try{localStorage.setItem("tab",t)}catch(e){}}
+tabs.forEach(t=>document.getElementById("t-"+t).addEventListener("click",()=>{show(t);history.replaceState(null,"","#"+t)}));
+let start=(location.hash||"").slice(1);if(!tabs.includes(start)){try{start=localStorage.getItem("tab")}catch(e){}}
+show(tabs.includes(start)?start:"artefakte");
+</script>
+
+</body></html>
